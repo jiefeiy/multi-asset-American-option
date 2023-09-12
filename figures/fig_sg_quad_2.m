@@ -70,6 +70,8 @@ N_Q_GK = [21    65   173];
 err2_GK_i7 = abs(V2_GK_i7 - ref(1))./ref(1);
 hold on; plot(N_Q_GK, err2_GK_i7, 'DisplayName','Genz-Keister, L^{interp} = 7',...
     'Color',colors{6}, 'Marker' ,markers{6},'markersize',ms,'MarkerFaceColor',colors{6},'MarkerEdgeColor',colors{6},'LineWidth',lw);
-legend('FontSize',12);
+legend('FontSize',20);
+box on;
+ax = gca;  ax.FontSize = 20; 
 
-set(h, 'Position', [100 100 500 400]);
+set(h, 'Position', [100 100 700 650]);

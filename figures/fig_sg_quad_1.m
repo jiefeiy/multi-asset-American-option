@@ -35,10 +35,12 @@ plot(nb_quad_GK, maxerror_GK,'Color',colors{5}, 'Marker' ,markers{5},...
 
 xla = xlabel('$M$');
 set(xla,'Interpreter','latex');
-set(xla,'FontSize',12);
+set(xla,'FontSize',20);
 yla = ylabel('$\|F_{K-1} - \hat{F}_{K-1}\|_\infty$');
 set(yla,'Interpreter','latex');
-set(yla,'FontSize',12);
-legend('FontSize',12);
+set(yla,'FontSize',20);
+legend('FontSize',20);
+box on;
+ax = gca;  ax.FontSize = 20; 
 
-set(h, 'Position', [100 100 500 400]);
+set(h, 'Position', [100 100 700 650]);

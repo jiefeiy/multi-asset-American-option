@@ -110,17 +110,19 @@ for i = [1,2,4,6,8,10]
 end
 set(gca, 'YScale', 'log');
 set(gca, 'XScale', 'log');
-legend('Fontsize', 12);
+legend('Fontsize', 20);
 xla = xlabel('$N$');
 set(xla,'Interpreter','latex');
-set(xla,'FontSize',12);
-ylabel('relative error','Fontsize', 12);
+set(xla,'FontSize',20);
+ylabel('relative error','Fontsize', 20);
+box on;
+ax = gca;  ax.FontSize = 20; 
 
 xref = 10.^(1:.1:3);
 yref = xref.^(-2)*exp(0.01);
 hold on; plot(xref, yref, '--k', 'DisplayName','slope = -2');
 
-set(h, 'Position', [100 100 550 400]);
+set(h, 'Position', [100 100 700 650]);
 
 
 

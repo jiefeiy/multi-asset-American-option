@@ -66,13 +66,18 @@ subplot(1,2,1);
 scatter(zqknots_mat(1,:), zqknots_mat(2,:), [],colors{6},'.','DisplayName','quadrature');
 hold on;
 scatter(zknots_in(1,:), zknots_in(2,:),[],'k',"filled",'DisplayName','interpolation');
-legend
-xlabel('z_1'); ylabel('z_2');
+legend('Fontsize', 20);
+xlabel('z_1','FontSize', 20); ylabel('z_2','FontSize', 20);
+box on;
+ax = gca;  ax.FontSize = 20; 
+
 subplot(1,2,2);
 scatter(Sqknots_mat(1,:), Sqknots_mat(2,:), [],colors{6},'.','DisplayName','quadrature');
 hold on;
 scatter(Sknots_in(1,:), Sknots_in(2,:),[],'k',"filled",'DisplayName','interpolation');
-legend
-xlabel('S_1'); ylabel('S_2');
+legend('Fontsize', 20);
+xlabel('S_1', 'FontSize', 20); ylabel('S_2', 'FontSize',20);
+box on;
+ax = gca;  ax.FontSize = 20; 
 
-set(h, 'Position', [100 100 900 400]);
+set(h, 'Position', [100 100 1400 650]);

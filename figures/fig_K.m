@@ -18,13 +18,15 @@ h3 = figure(3);
 plot(10:5:105, err_i8,'DisplayName','L=2',...
      'Color',colors{1}, 'Marker' ,markers{1},'markersize',ms,'MarkerFaceColor',colors{1},'MarkerEdgeColor',colors{1},'LineWidth',lw);
 
-xlabel('K','FontSize',12);
-ylabel('relative error','FontSize',12);
-legend('FontSize',12);
+xlabel('K','FontSize',20);
+ylabel('relative error','FontSize',20);
+legend('FontSize',20);
+box on;
+ax = gca;  ax.FontSize = 20; 
 
 set(gca, 'YScale', 'log');
 set(gca, 'XScale', 'log');
-set(h3, 'Position', [100 100 450 400]);
+set(h3, 'Position', [100 100 700 650]);
 
 xref = 10.^(1:.1:2);
 yref = xref.^(-1)*exp(-4);

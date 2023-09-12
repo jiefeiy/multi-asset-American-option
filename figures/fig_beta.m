@@ -24,9 +24,11 @@ for i=1:5
         'Color',colors{i}, 'Marker' ,markers{i},'markersize',ms,'MarkerFaceColor',colors{i},'MarkerEdgeColor',colors{i},'LineWidth',lw);
 end
 set(gca, 'YScale', 'log');
-legend('FontSize',12,'Location','southwest');
-xlabel('interpolation level','FontSize',12);
-ylabel('relative error');
-set(h1, 'Position', [100 100 500 400]);
+legend('FontSize',20,'Location','southwest');
+xlabel('interpolation level','FontSize',20);
+ylabel('relative error', 'FontSize',20);
+box on;
+ax = gca;  ax.FontSize = 20; 
+set(h1, 'Position', [100 100 700 650]);
 
 

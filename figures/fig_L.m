@@ -19,8 +19,10 @@ err = abs(price - ref)./ref;
 h1 = figure(1);
 plot(L,err,...
     'Color',colors{1}, 'Marker' ,markers{1},'markersize',ms,'MarkerFaceColor',colors{1},'MarkerEdgeColor',colors{1},'LineWidth',lw);
-xlabel('L','FontSize',12);
-ylabel('relative error','FontSize',12);
-set(h1, 'Position', [100 100 500 400]);
+xlabel('L','FontSize',20);
+ylabel('relative error','FontSize',20);
+box on;
+ax = gca;  ax.FontSize = 20; 
+set(h1, 'Position', [100 100 700 650]);
 
 

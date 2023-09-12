@@ -17,10 +17,12 @@ hold on; plot(d', N', 'Color',colors{3}, 'Marker',markers{3},'markersize',ms,'Ma
 
 set(gca, 'YScale', 'log');
 set(gca, 'XScale', 'log');
-xlabel('d','Fontsize', 12); 
+xlabel('d','Fontsize', 20); 
 % ylabel('The number of points','Fontsize', 12);
+box on;
+ax = gca;  ax.FontSize = 20; 
 leg1 = legend('$\tilde{N}_{full}$','$\tilde{N}_{CGL}$','$N$');
 set(leg1,'Interpreter','latex');
-set(leg1,'FontSize',12);
+set(leg1,'FontSize',20);
 set(leg1, 'Location', 'northwest')
-set(h1, 'Position', [100 100 420 350])
+set(h1, 'Position', [100 100 700 650])
