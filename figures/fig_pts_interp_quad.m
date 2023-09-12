@@ -67,7 +67,13 @@ scatter(zqknots_mat(1,:), zqknots_mat(2,:), [],colors{6},'.','DisplayName','quad
 hold on;
 scatter(zknots_in(1,:), zknots_in(2,:),[],'k',"filled",'DisplayName','interpolation');
 legend('Fontsize', 20);
-xlabel('z_1','FontSize', 20); ylabel('z_2','FontSize', 20);
+xla = xlabel('$z_1$');
+set(xla,'Interpreter','latex');
+set(xla,'FontSize',20);
+yla = ylabel('$z_2$');
+set(yla,'Interpreter','latex');
+set(yla,'FontSize',20);
+
 box on;
 ax = gca;  ax.FontSize = 20; 
 
@@ -76,7 +82,12 @@ scatter(Sqknots_mat(1,:), Sqknots_mat(2,:), [],colors{6},'.','DisplayName','quad
 hold on;
 scatter(Sknots_in(1,:), Sknots_in(2,:),[],'k',"filled",'DisplayName','interpolation');
 legend('Fontsize', 20);
-xlabel('S_1', 'FontSize', 20); ylabel('S_2', 'FontSize',20);
+xla = xlabel('$S_1$');
+set(xla,'Interpreter','latex');
+set(xla,'FontSize',20);
+yla = ylabel('$S_2$');
+set(yla,'Interpreter','latex');
+set(yla,'FontSize',20);
 box on;
 ax = gca;  ax.FontSize = 20; 
 

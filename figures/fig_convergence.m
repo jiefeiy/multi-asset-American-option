@@ -110,11 +110,15 @@ for i = [1,2,4,6,8,10]
 end
 set(gca, 'YScale', 'log');
 set(gca, 'XScale', 'log');
-legend('Fontsize', 20);
+
 xla = xlabel('$N$');
 set(xla,'Interpreter','latex');
 set(xla,'FontSize',20);
 ylabel('relative error','Fontsize', 20);
+leg1 = legend('$d=2$','$d=3$','$d=5$','$d=7$','$d=9$','$d=11$');
+set(leg1,'Interpreter','latex');
+set(leg1,'FontSize',20);
+
 box on;
 ax = gca;  ax.FontSize = 20; 
 

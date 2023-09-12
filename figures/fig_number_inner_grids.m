@@ -17,7 +17,9 @@ hold on; plot(d', N', 'Color',colors{3}, 'Marker',markers{3},'markersize',ms,'Ma
 
 set(gca, 'YScale', 'log');
 set(gca, 'XScale', 'log');
-xlabel('d','Fontsize', 20); 
+xla = xlabel('$d$');
+set(xla,'Interpreter','latex');
+set(xla,'FontSize',20);
 % ylabel('The number of points','Fontsize', 12);
 box on;
 ax = gca;  ax.FontSize = 20; 

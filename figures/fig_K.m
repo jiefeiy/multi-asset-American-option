@@ -18,17 +18,23 @@ h3 = figure(3);
 plot(10:5:105, err_i8,'DisplayName','L=2',...
      'Color',colors{1}, 'Marker' ,markers{1},'markersize',ms,'MarkerFaceColor',colors{1},'MarkerEdgeColor',colors{1},'LineWidth',lw);
 
-xlabel('K','FontSize',20);
+xla = xlabel('$K$');
+set(xla,'Interpreter','latex');
+set(xla,'FontSize',20);
 ylabel('relative error','FontSize',20);
-legend('FontSize',20);
+
 box on;
 ax = gca;  ax.FontSize = 20; 
 
 set(gca, 'YScale', 'log');
 set(gca, 'XScale', 'log');
-set(h3, 'Position', [100 100 700 650]);
 
 xref = 10.^(1:.1:2);
 yref = xref.^(-1)*exp(-4);
 hold on; plot(xref, yref, '--k', 'DisplayName','slope = -1');
 
+leg1 = legend('$L_I = 8, \beta = 1, L=2$','slope = -1');
+set(leg1,'Interpreter','latex');
+set(leg1,'FontSize',20);
+
+set(h3, 'Position', [100 100 700 650]);

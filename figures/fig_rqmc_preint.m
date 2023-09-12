@@ -66,8 +66,17 @@ hold on;
 plot(log2(M(1:end)), rmse_rel_preint(1:end), 'DisplayName','RQMC with preintegration',...
      'Color',colors{2}, 'Marker' ,markers{2},'markersize',ms,'MarkerFaceColor',colors{2},'MarkerEdgeColor',colors{2},'LineWidth',lw);
 set(gca, 'YScale', 'log');
-xlabel('log2(M)','FontSize',20); ylabel('RMSE','FontSize',20);
-legend('FontSize',20);
+
+xla = xlabel('$\log_2(M)$');
+set(xla,'Interpreter','latex');
+set(xla,'FontSize',20);
+yla = ylabel('RMSE');
+set(yla,'Interpreter','latex');
+set(yla,'FontSize',20);
+
+leg1 = legend('RQMC','RQMC with preintegration');
+set(leg1,'Interpreter','latex');
+set(leg1,'FontSize',20);
 box on;
 % title('The root mean square error for pricing a 5d American option');
 set(h1, 'Position', [100 100 700 650]);

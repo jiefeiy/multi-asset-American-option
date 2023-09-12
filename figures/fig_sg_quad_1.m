@@ -36,10 +36,13 @@ plot(nb_quad_GK, maxerror_GK,'Color',colors{5}, 'Marker' ,markers{5},...
 xla = xlabel('$M$');
 set(xla,'Interpreter','latex');
 set(xla,'FontSize',20);
-yla = ylabel('$\|F_{K-1} - \hat{F}_{K-1}\|_\infty$');
+yla = ylabel('$\|F_{K-1} - \hat{F}_{K-1}\|_{L^\infty}$');
 set(yla,'Interpreter','latex');
 set(yla,'FontSize',20);
-legend('FontSize',20);
+
+leg1 = legend('Gauss Hermite','normal Leja','Genz-Keister');
+set(leg1,'Interpreter','latex');
+set(leg1,'FontSize',20);
 box on;
 ax = gca;  ax.FontSize = 20; 
 

@@ -24,9 +24,15 @@ for i=1:5
         'Color',colors{i}, 'Marker' ,markers{i},'markersize',ms,'MarkerFaceColor',colors{i},'MarkerEdgeColor',colors{i},'LineWidth',lw);
 end
 set(gca, 'YScale', 'log');
-legend('FontSize',20,'Location','southwest');
-xlabel('interpolation level','FontSize',20);
+leg1 = legend('$\beta = 1$','$\beta = 2$','$\beta = 3$','$\beta = 4$','$\beta = 5$');
+set(leg1,'Interpreter','latex');
+set(leg1,'FontSize',20);
+
+xla = xlabel('interpolation level $L_I$');
+set(xla,'Interpreter','latex');
+set(xla,'FontSize',20);
 ylabel('relative error', 'FontSize',20);
+
 box on;
 ax = gca;  ax.FontSize = 20; 
 set(h1, 'Position', [100 100 700 650]);
