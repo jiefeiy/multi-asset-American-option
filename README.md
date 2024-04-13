@@ -57,6 +57,12 @@ To get the results in Section 5 (Numerical experiments) of the paper, run execut
     * run `t2_different_L.m` to obtain Figure 7(b);
     * run `t3_different_K.m` to obtain Figure 7(c).
 
+## Reproducibility of Figure 1,2,3
+First, get into the directory `./figures123/`, then 
+ * run `fig1_b_and_c.m` to obtain Figure 1(b)(c).
+ * run `fig2_transform_gridpoints.m` to obtain Figure 2(a)(b).
+ * run `fig3_compare_num_points.m` to obtain Figure 3.
+ * To obtain Figure 1(a), the toolbox "Algorithm 847: Spinterp: piecewise multilinear hierarchical sparse grid interpolation in MATLAB" (https://dl.acm.org/doi/abs/10.1145/1114268.1114275) is required. After installation, run `fig1_a_maxnorm_no_boundary.m`.
 
 ## References
 The implementation of sparse grids is based on the Sparse Grids Matlab Kit, 
